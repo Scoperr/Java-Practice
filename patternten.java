@@ -1,0 +1,26 @@
+package patterns11;
+
+import java.util.Scanner;
+
+public class patternten {
+    public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            printpattern(n);
+        }
+    }
+
+    private static void printpattern(int n) {
+        int f = 1;
+        for(int lines = 1; lines<=n;lines++){
+            for(int spaces = 1;spaces<=n-lines;spaces++){
+                System.out.print(" ");
+            }
+            for(int p = 1;p<=lines;p++){
+                System.out.print(f+" ");
+            }
+            System.out.println();
+            f++;
+        }
+    }
+}
